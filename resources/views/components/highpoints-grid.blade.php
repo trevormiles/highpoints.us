@@ -7,7 +7,7 @@
             @auth
                 <p>You have completed {{ $userCompletedHighpointsCount }} of {{ $highpoints->count() }} highpoints.</p>
             @else
-                <p>Want to track your completed highpoints? <a href="{{ route('login') }}">Sign in</a> to get started.</p>
+                <p>Want to track your completed highpoints? <a href="{{ route('register') }}">Sign up</a> to get started.</p>
             @endauth
         </div>
         <div class="highpoints-grid">

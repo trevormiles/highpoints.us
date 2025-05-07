@@ -17,7 +17,7 @@ final class HighpointController extends Controller
         $highpoints = Highpoint::all();
         $userCompletedHighpointsCount = auth()->user()?->highpoints()->wherePivot('completed', true)->count() ?? null;
 
-        return view('highpoints', [
+        return view('highpoint.index', [
             'highpoints' => $highpoints,
             'userCompletedHighpointsCount' => $userCompletedHighpointsCount,
         ]);

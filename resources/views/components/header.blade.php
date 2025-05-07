@@ -38,7 +38,8 @@
                         </div>
                     </div>
                 @else
-                    <a href="{{ route('login') }}" class="btn-primary">Sign In</a>
+                    <a href="{{ route('register') }}" class="btn-secondary">Sign Up</a>
+                    <a href="{{ route('login') }}" class="btn-primary">Login</a>
                 @endauth
             </div>
         </nav>
