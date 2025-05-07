@@ -1,7 +1,5 @@
 # highpoints.us
 
-This web application is meant to be used as a companion to track your progress as you complete the US highpoints challenge, which involves summiting the tallest natural point in each of the 50 unites states.
-
 ## Project Overview
 
 Highpoints.us is a Laravel-based web application that helps adventurers track their progress in completing the US highpoints challenge. The application provides features for:
