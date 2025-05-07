@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\Highpoint;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 final class HighpointSeeder extends Seeder
 {
@@ -18,6 +19,7 @@ final class HighpointSeeder extends Seeder
         $highpoints = [
             [
                 'name' => 'Denali',
+                'slug' => 'denali',
                 'state' => 'AK',
                 'elevation' => 20310,
                 'difficulty' => 'extreme',
@@ -26,6 +28,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Whitney',
+                'slug' => 'mount-whitney',
                 'state' => 'CA',
                 'elevation' => 14494,
                 'difficulty' => 'challenging',
@@ -34,6 +37,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Elbert',
+                'slug' => 'mount-elbert',
                 'state' => 'CO',
                 'elevation' => 14433,
                 'difficulty' => 'challenging',
@@ -42,6 +46,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mauna Kea',
+                'slug' => 'mauna-kea',
                 'state' => 'HI',
                 'elevation' => 13803,
                 'difficulty' => 'moderate',
@@ -50,6 +55,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Rainier',
+                'slug' => 'mount-rainier',
                 'state' => 'WA',
                 'elevation' => 14411,
                 'difficulty' => 'difficult',
@@ -58,6 +64,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Gannett Peak',
+                'slug' => 'gannett-peak',
                 'state' => 'WY',
                 'elevation' => 13804,
                 'difficulty' => 'difficult',
@@ -66,6 +73,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Hood',
+                'slug' => 'mount-hood',
                 'state' => 'OR',
                 'elevation' => 11239,
                 'difficulty' => 'challenging',
@@ -74,6 +82,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Borah Peak',
+                'slug' => 'borah-peak',
                 'state' => 'ID',
                 'elevation' => 12662,
                 'difficulty' => 'challenging',
@@ -82,6 +91,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Granite Peak',
+                'slug' => 'granite-peak',
                 'state' => 'MT',
                 'elevation' => 12799,
                 'difficulty' => 'difficult',
@@ -90,6 +100,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Wheeler Peak',
+                'slug' => 'wheeler-peak',
                 'state' => 'NM',
                 'elevation' => 13161,
                 'difficulty' => 'moderate',
@@ -98,6 +109,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Boundary Peak',
+                'slug' => 'boundary-peak',
                 'state' => 'NV',
                 'elevation' => 13140,
                 'difficulty' => 'challenging',
@@ -106,6 +118,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Kings Peak',
+                'slug' => 'kings-peak',
                 'state' => 'UT',
                 'elevation' => 13528,
                 'difficulty' => 'challenging',
@@ -114,6 +127,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Humphreys Peak',
+                'slug' => 'humphreys-peak',
                 'state' => 'AZ',
                 'elevation' => 12633,
                 'difficulty' => 'moderate',
@@ -122,6 +136,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Guadalupe Peak',
+                'slug' => 'guadalupe-peak',
                 'state' => 'TX',
                 'elevation' => 8749,
                 'difficulty' => 'moderate',
@@ -130,6 +145,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Black Elk Peak',
+                'slug' => 'black-elk-peak',
                 'state' => 'SD',
                 'elevation' => 7242,
                 'difficulty' => 'easy',
@@ -138,6 +154,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'White Butte',
+                'slug' => 'white-butte',
                 'state' => 'ND',
                 'elevation' => 3506,
                 'difficulty' => 'easy',
@@ -146,6 +163,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Panorama Point',
+                'slug' => 'panorama-point',
                 'state' => 'NE',
                 'elevation' => 5424,
                 'difficulty' => 'easy',
@@ -154,6 +172,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Sunflower',
+                'slug' => 'mount-sunflower',
                 'state' => 'KS',
                 'elevation' => 4039,
                 'difficulty' => 'easy',
@@ -162,6 +181,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Black Mesa',
+                'slug' => 'black-mesa',
                 'state' => 'OK',
                 'elevation' => 4973,
                 'difficulty' => 'easy',
@@ -170,6 +190,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Magazine',
+                'slug' => 'mount-magazine',
                 'state' => 'AR',
                 'elevation' => 2753,
                 'difficulty' => 'easy',
@@ -178,6 +199,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Clingmans Dome',
+                'slug' => 'clingmans-dome',
                 'state' => 'TN',
                 'elevation' => 6643,
                 'difficulty' => 'easy',
@@ -186,6 +208,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Mitchell',
+                'slug' => 'mount-mitchell',
                 'state' => 'NC',
                 'elevation' => 6684,
                 'difficulty' => 'easy',
@@ -194,6 +217,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Rogers',
+                'slug' => 'mount-rogers',
                 'state' => 'VA',
                 'elevation' => 5729,
                 'difficulty' => 'moderate',
@@ -202,6 +226,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Spruce Knob',
+                'slug' => 'spruce-knob',
                 'state' => 'WV',
                 'elevation' => 4861,
                 'difficulty' => 'easy',
@@ -210,6 +235,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Davis',
+                'slug' => 'mount-davis',
                 'state' => 'PA',
                 'elevation' => 3213,
                 'difficulty' => 'easy',
@@ -218,6 +244,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Marcy',
+                'slug' => 'mount-marcy',
                 'state' => 'NY',
                 'elevation' => 5344,
                 'difficulty' => 'moderate',
@@ -226,6 +253,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Mansfield',
+                'slug' => 'mount-mansfield',
                 'state' => 'VT',
                 'elevation' => 4393,
                 'difficulty' => 'moderate',
@@ -234,6 +262,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Washington',
+                'slug' => 'mount-washington',
                 'state' => 'NH',
                 'elevation' => 6288,
                 'difficulty' => 'challenging',
@@ -242,6 +271,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Katahdin',
+                'slug' => 'katahdin',
                 'state' => 'ME',
                 'elevation' => 5268,
                 'difficulty' => 'challenging',
@@ -250,6 +280,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Greylock',
+                'slug' => 'mount-greylock',
                 'state' => 'MA',
                 'elevation' => 3489,
                 'difficulty' => 'easy',
@@ -258,6 +289,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Frissell-South Slope',
+                'slug' => 'mount-frissell-south-slope',
                 'state' => 'CT',
                 'elevation' => 2380,
                 'difficulty' => 'moderate',
@@ -266,6 +298,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Jerimoth Hill',
+                'slug' => 'jerimoth-hill',
                 'state' => 'RI',
                 'elevation' => 812,
                 'difficulty' => 'easy',
@@ -274,6 +307,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'High Point',
+                'slug' => 'high-point',
                 'state' => 'NJ',
                 'elevation' => 1803,
                 'difficulty' => 'easy',
@@ -282,6 +316,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Ebright Azimuth',
+                'slug' => 'ebright-azimuth',
                 'state' => 'DE',
                 'elevation' => 448,
                 'difficulty' => 'easy',
@@ -290,6 +325,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Backbone Mountain',
+                'slug' => 'backbone-mountain',
                 'state' => 'MD',
                 'elevation' => 3360,
                 'difficulty' => 'easy',
@@ -298,6 +334,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Arvon',
+                'slug' => 'mount-arvon',
                 'state' => 'MI',
                 'elevation' => 1979,
                 'difficulty' => 'easy',
@@ -306,6 +343,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Eagle Mountain',
+                'slug' => 'eagle-mountain',
                 'state' => 'MN',
                 'elevation' => 2301,
                 'difficulty' => 'easy',
@@ -314,6 +352,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Timms Hill',
+                'slug' => 'timms-hill',
                 'state' => 'WI',
                 'elevation' => 1951,
                 'difficulty' => 'easy',
@@ -322,6 +361,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Charles Mound',
+                'slug' => 'charles-mound',
                 'state' => 'IL',
                 'elevation' => 1235,
                 'difficulty' => 'easy',
@@ -330,6 +370,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Taum Sauk Mountain',
+                'slug' => 'taum-sauk-mountain',
                 'state' => 'MO',
                 'elevation' => 1772,
                 'difficulty' => 'easy',
@@ -338,6 +379,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Hoosier Hill',
+                'slug' => 'hoosier-hill',
                 'state' => 'IN',
                 'elevation' => 1257,
                 'difficulty' => 'easy',
@@ -346,6 +388,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Campbell Hill',
+                'slug' => 'campbell-hill',
                 'state' => 'OH',
                 'elevation' => 1550,
                 'difficulty' => 'easy',
@@ -354,6 +397,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Black Mountain',
+                'slug' => 'black-mountain',
                 'state' => 'KY',
                 'elevation' => 4145,
                 'difficulty' => 'moderate',
@@ -362,6 +406,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Cheaha Mountain',
+                'slug' => 'cheaha-mountain',
                 'state' => 'AL',
                 'elevation' => 2407,
                 'difficulty' => 'easy',
@@ -370,6 +415,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Woodall Mountain',
+                'slug' => 'woodall-mountain',
                 'state' => 'MS',
                 'elevation' => 806,
                 'difficulty' => 'easy',
@@ -378,6 +424,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Driskill Mountain',
+                'slug' => 'driskill-mountain',
                 'state' => 'LA',
                 'elevation' => 535,
                 'difficulty' => 'easy',
@@ -386,6 +433,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Magazine Mountain',
+                'slug' => 'magazine-mountain',
                 'state' => 'GA',
                 'elevation' => 4784,
                 'difficulty' => 'easy',
@@ -394,6 +442,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Britton Hill',
+                'slug' => 'britton-hill',
                 'state' => 'FL',
                 'elevation' => 345,
                 'difficulty' => 'easy',
@@ -402,6 +451,7 @@ final class HighpointSeeder extends Seeder
             ],
             [
                 'name' => 'Mount Rogers',
+                'slug' => 'mount-rogers-sc',
                 'state' => 'SC',
                 'elevation' => 3560,
                 'difficulty' => 'easy',

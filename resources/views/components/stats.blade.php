@@ -1,8 +1,8 @@
 <section class="stats">
     <div class="container">
         <div class="stats-header">
-            <h2>Trusted by Highpointers Nationwide</h2>
-            <p>Join thousands of adventurers tracking their highpointing journey</p>
+            <h2>Where will highpointing take you?</h2>
+            <p>From serious mountaineering excursions to drive up highpoints, summitting each state's highpoint is an epic journey.</p>
         </div>
         <div class="stats-grid">
             <div class="stats-item">

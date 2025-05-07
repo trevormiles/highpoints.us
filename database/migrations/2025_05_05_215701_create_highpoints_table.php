@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('highpoints', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('slug')->unique();
             $table->string('state', 2);
             $table->integer('elevation');
             $table->enum('difficulty', ['easy', 'moderate', 'challenging', 'difficult', 'extreme']);

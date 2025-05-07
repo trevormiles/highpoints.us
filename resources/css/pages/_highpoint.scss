@@ -70,6 +70,14 @@
                         &.difficult {
                             color: $danger;
                         }
+
+                        &.challenging {
+                            color: $danger;
+                        }
+
+                        &.extreme {
+                            color: $danger;
+                        }
                     }
                 }
             }

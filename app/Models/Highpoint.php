@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Support\Str;
 
 final class Highpoint extends Model
 {
@@ -27,6 +28,28 @@ final class Highpoint extends Model
     protected $casts = [
         'elevation' => 'integer',
     ];
+
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function (Highpoint $highpoint) {
+            if (empty($highpoint->slug)) {
+                $highpoint->slug = Str::slug($highpoint->name);
+            }
+        });
+
+        static::updating(function (Highpoint $highpoint) {
+            if ($highpoint->isDirty('name')) {
+                $highpoint->slug = Str::slug($highpoint->name);
+            }
+        });
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 
     /**
      * Get the users who have completed this highpoint.

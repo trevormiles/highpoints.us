@@ -1,8 +1,12 @@
 <section id="highpoints" class="highpoints">
     <div class="container">
         <div class="highpoints-header">
-            <h2>Explore America's Highpoints</h2>
-            <p>From the towering peaks of Alaska to the gentle hills of Florida, discover the diverse landscapes of America's state highpoints.</p>
+            <h2>America's Highpoints</h2>
+            @auth
+                <p>From the towering peaks of Alaska to the gentle hills of Florida, discover the diverse landscapes of America's state highpoints.</p>
+            @else
+                <p>Want to track your completed highpoints? <a href="{{ route('login') }}">Sign in</a> to get started.</p>
+            @endauth
         </div>
         <div class="highpoints-grid">
             @foreach($highpoints as $highpoint)

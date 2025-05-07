@@ -17,10 +17,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/highpoints', [HighpointController::class, 'index'])
-    ->name('highpoints.index');
-
-Route::get('/highpoints/{highpoint}', [HighpointController::class, 'show'])
-    ->name('highpoints.show');
+Route::get('/highpoints', [HighpointController::class, 'index'])->name('highpoints.index');
+Route::get('/highpoints/{highpoint}', [HighpointController::class, 'show'])->name('highpoints.show');
 
 require __DIR__.'/auth.php';

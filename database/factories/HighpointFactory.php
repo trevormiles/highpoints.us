@@ -6,6 +6,7 @@ namespace Database\Factories;
 
 use App\Models\Highpoint;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Highpoint>
@@ -26,14 +27,17 @@ final class HighpointFactory extends Factory
      */
     public function definition(): array
     {
+        $name = fake()->unique()->words(3, true);
+        
         return [
-            'name' => $this->faker->unique()->words(2, true),
-            'state' => $this->faker->unique()->stateAbbr(),
-            'elevation' => $this->faker->numberBetween(1000, 20000),
-            'difficulty' => $this->faker->randomElement(['easy', 'moderate', 'challenging', 'difficult', 'extreme']),
-            'description' => $this->faker->paragraph(),
+            'name' => $name,
+            'slug' => Str::slug($name),
+            'state' => fake()->state(),
+            'elevation' => fake()->numberBetween(1000, 20000),
+            'difficulty' => fake()->randomElement(['easy', 'moderate', 'challenging', 'difficult', 'extreme']),
+            'description' => fake()->paragraph(),
             'image_path' => 'images/highpoints/default.jpg',
-            'image_alt' => $this->faker->sentence(),
+            'image_alt' => fake()->sentence(),
         ];
     }
 }
