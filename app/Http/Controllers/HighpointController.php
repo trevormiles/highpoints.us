@@ -15,9 +15,11 @@ final class HighpointController extends Controller
     public function index(): View
     {
         $highpoints = Highpoint::all();
+        $userCompletedHighpointsCount = auth()->user()?->highpoints()->wherePivot('completed', true)->count() ?? null;
 
         return view('highpoints', [
             'highpoints' => $highpoints,
+            'userCompletedHighpointsCount' => $userCompletedHighpointsCount,
         ]);
     }
 

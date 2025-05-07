@@ -52,6 +52,7 @@ $highpoints = [
     'magazine-mountain-ga' => 'Magazine Mountain, Georgia',
     'britton-hill-fl' => 'Britton Hill, Florida',
     'mount-rogers-sc' => 'Mount Rogers, South Carolina',
+    'hawkeye-point-ia' => 'Hawkeye Point, Iowa',
 ];
 
 $imageDir = __DIR__ . '/../public/images/highpoints';

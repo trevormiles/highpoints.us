@@ -458,6 +458,15 @@ final class HighpointSeeder extends Seeder
                 'image_path' => 'images/highpoints/mount-rogers-sc.jpg',
                 'image_alt' => 'Mount Rogers, South Carolina - The highest point in South Carolina',
             ],
+            [
+                'name' => 'Hawkeye Point',
+                'slug' => 'hawkeye-point-ia',
+                'state' => 'IA',
+                'elevation' => 1670,
+                'difficulty' => 'easy',
+                'image_path' => 'images/highpoints/hawkeye-point-ia.jpg',
+                'image_alt' => 'Hawkeye Point, Iowa - The highest point in Iowa',
+            ],
         ];
 
         // Create each highpoint with its specific data
