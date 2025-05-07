@@ -24,6 +24,10 @@
                         </button>
 
                         <div class="frontend-dropdown-content">
+                            <a href="{{ route('highpoints.index') }}" class="frontend-dropdown-link">
+                                Highpoints
+                            </a>
+
                             <a href="{{ route('profile.edit') }}" class="frontend-dropdown-link">
                                 Profile
                             </a>
