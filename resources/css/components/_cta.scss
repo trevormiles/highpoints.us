@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../base/variables' as *;
 
 .cta {
@@ -27,7 +28,7 @@
             color: $primary-color;
 
             &:hover {
-                background-color: darken($white, 5%);
+                background-color: color.adjust($white, $lightness: -5%);
             }
         }
     }

@@ -11,4 +11,15 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    css: {
+        preprocessorOptions: {
+            scss: {
+                // Use the modern Sass API
+                implementation: 'sass',
+                sassOptions: {
+                    outputStyle: 'compressed',
+                },
+            },
+        },
+    },
 });
