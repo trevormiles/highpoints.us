@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('state', 2);
             $table->integer('elevation');
             $table->enum('difficulty', ['easy', 'moderate', 'challenging', 'difficult', 'extreme']);
+            $table->text('description')->nullable();
+            $table->string('image_path')->nullable();
+            $table->string('image_alt')->nullable();
             $table->timestamps();
         });
     }

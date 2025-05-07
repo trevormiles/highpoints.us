@@ -9,7 +9,16 @@ class HomeController extends Controller
 {
     public function index(): View
     {
-        $highpoints = Highpoint::all();
+        $query = Highpoint::query();
+
+        // If user is authenticated, load their completion status
+        if (auth()->check()) {
+            $query->with(['users' => function ($query) {
+                $query->where('users.id', auth()->id());
+            }]);
+        }
+
+        $highpoints = $query->get();
         $featuredHighpoint = Highpoint::where('state', 'AK')->first(); // Denali as featured
 
         return view('home', [

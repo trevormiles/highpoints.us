@@ -59,11 +59,23 @@ body {
     &-secondary {
         @extend .btn;
         background-color: transparent;
-        color: $white;
-        border: 1px solid $white;
+        color: $primary-color;
+        border: 1px solid $primary-color;
 
         &:hover {
-            background-color: color.change($white, $alpha: 0.1);
+            background-color: color.change($primary-color, $alpha: 0.1);
+        }
+    }
+
+    &-tertiary {
+        @extend .btn;
+        background-color: transparent;
+        color: $white;
+        border: 2px solid $white;
+
+        &:hover {
+            background-color: $white;
+            color: $secondary-color;
         }
     }
 } 

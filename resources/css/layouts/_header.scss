@@ -60,6 +60,77 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    position: relative;
+}
+
+.user-menu-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    color: $text-color;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: color.change($primary-color, $alpha: 0.1);
+        color: $primary-color;
+    }
+}
+
+.user-name {
+    font-size: 0.875rem;
+}
+
+.user-menu-icon {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.2s;
+}
+
+.user-menu-button:hover .user-menu-icon {
+    transform: rotate(180deg);
+}
+
+// Frontend Header Dropdown
+.frontend-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.frontend-dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+.frontend-dropdown-content.show {
+    display: block;
+}
+
+.frontend-dropdown-link {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: #f3f4f6;
+    }
 }
 
 // Responsive styles

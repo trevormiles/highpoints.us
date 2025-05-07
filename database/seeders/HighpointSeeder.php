@@ -1,18 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Highpoint;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-class HighpointSeeder extends Seeder
+final class HighpointSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
+        // Create the specific highpoints with their exact data
         $highpoints = [
             [
                 'name' => 'Denali',
@@ -408,8 +410,9 @@ class HighpointSeeder extends Seeder
             ],
         ];
 
+        // Create each highpoint with its specific data
         foreach ($highpoints as $highpoint) {
-            DB::table('highpoints')->insert($highpoint);
+            Highpoint::factory()->create($highpoint);
         }
     }
 }
