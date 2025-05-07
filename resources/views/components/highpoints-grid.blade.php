@@ -3,7 +3,7 @@
 <section id="highpoints" class="highpoints">
     <div class="container">
         <div class="highpoints-header">
-            <h2>America's Highpoints</h2>
+            <h2>The U.S. Highpoints</h2>
             @auth
                 <p>You have completed {{ $userCompletedHighpointsCount }} of {{ $highpoints->count() }} highpoints.</p>
             @else

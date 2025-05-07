@@ -9,8 +9,7 @@
             <div class="nav-links">
                 <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
                 <a href="{{ route('highpoints.index') }}" class="nav-link {{ request()->routeIs('highpoints.index') ? 'active' : '' }}">Highpoints</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Resources</a>
+                <a href="{{ route('resources') }}" class="nav-link {{ request()->routeIs('resources') ? 'active' : '' }}">Resources</a>
             </div>
 
             <div class="nav-actions">

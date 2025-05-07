@@ -1,5 +1,11 @@
 @extends('layouts.main')
 
+@push('meta')
+    <title>highpoints.us | {{ $highpoint->name }}</title>
+    <meta name="title" content="highpoints.us | {{ $highpoint->name }}">
+    <meta name="description" content="{{ $highpoint->description }}">
+@endpush
+
 @section('main-content')
     <div class="container">
         <div class="highpoint-detail">
