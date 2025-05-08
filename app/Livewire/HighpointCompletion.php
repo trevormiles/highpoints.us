@@ -45,7 +45,12 @@ final class HighpointCompletion extends Component
             return;
         }
 
+        if ($this->completed === false) {
+            $this->completionDate = null;
+        }
+
         $this->highpointUser->completed = $this->completed;
+        $this->highpointUser->completion_date = $this->completionDate;
         $this->highpointUser->save();
     }
 
@@ -55,20 +60,11 @@ final class HighpointCompletion extends Component
             return;
         }
 
-        // Validate the date
-        $validator = Validator::make(
-            ['completion_date' => $this->completionDate],
-            [
-                'completion_date' => ['required', 'date', 'before_or_equal:today'],
-            ]
-        );
-
-        if ($validator->fails()) {
-            $this->addError('completionDate', $validator->errors()->first('completion_date'));
-            return;
+        if ($this->completionDate === "") {
+            $this->completionDate = null;
         }
 
-        $this->highpointUser->completed_date = $this->completed_date;
+        $this->highpointUser->completion_date = $this->completionDate;
         $this->highpointUser->save();
     }
 
