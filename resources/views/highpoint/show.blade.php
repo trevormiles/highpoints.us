@@ -31,9 +31,7 @@
                         </div>
                     </div>
 
-                    <div wire:key="highpoint-completion-{{ $highpoint->id }}">
-                        <livewire:highpoint-completion :highpoint="$highpoint" />
-                    </div>
+                    <livewire:highpoint-completion :highpoint="$highpoint" />
                 </div>
             </div>
         </div>
