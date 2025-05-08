@@ -18,11 +18,11 @@ class HighpointsRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\Toggle::make('pivot.completed')
+                Forms\Components\Toggle::make('completed')
                     ->label('Completed'),
-                Forms\Components\DateTimePicker::make('pivot.completion_date')
+                Forms\Components\DateTimePicker::make('completion_date')
                     ->label('Completion Date'),
-                Forms\Components\Textarea::make('pivot.notes')
+                Forms\Components\Textarea::make('notes')
                     ->label('Notes'),
             ]);
     }
@@ -51,7 +51,14 @@ class HighpointsRelationManager extends RelationManager
                     ]),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->mutateFormDataUsing(function (array $data): array {
+                        return [
+                            'completed' => $data['completed'] ?? false,
+                            'completion_date' => $data['completion_date'] ?? null,
+                            'notes' => $data['notes'] ?? null,
+                        ];
+                    }),
             ]);
     }
 }
