@@ -12,14 +12,13 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Support\Facades\Hash;
+use App\Filament\Resources\UserResource\RelationManagers;
 
 final class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
-
-    protected static ?string $navigationGroup = 'Administration';
 
     protected static ?int $navigationSort = 1;
 
@@ -95,7 +94,7 @@ final class UserResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\HighpointsRelationManager::class,
         ];
     }
 
