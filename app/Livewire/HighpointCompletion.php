@@ -15,7 +15,6 @@ final class HighpointCompletion extends Component
 {
     public Highpoint $highpoint;
     public ?HighpointUser $highpointUser = null;
-    public string $testVar = 'test';
     public ?string $completionDate = null;
     public bool $completed = false;
 

@@ -2,7 +2,7 @@
     @auth
         <div class="highpoint-completion-form">
             <label for="completed">
-                <input type="checkbox" wire:model="completed">
+                <input type="checkbox" wire:model.live="completed" />
                 <span>Completed</span>
             </label>
         </div>
@@ -15,6 +15,4 @@
             </a>
         </div>
     @endauth
-
-    <input type="text" wire:model="testVar">
 </div>
